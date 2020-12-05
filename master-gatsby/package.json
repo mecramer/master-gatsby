@@ -22,6 +22,9 @@
         ],
         "rules": {
             "react/prop-types": 0
+        },
+        "globals": {
+            "window": true
         }
     },
     "dependencies": {
