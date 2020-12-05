@@ -5,11 +5,13 @@ function HomePage() {
 
   return (
     <>
-      <p>Hey! I'm the home page.</p>
+      <p>Hey! I'm A home page. I'm a really long title. I mean really long.</p>
       <p>Hey I'm another element</p>
+      <p>Hey I'm another element. I'm a medium length paragraph.</p>
       <div>
         <div>
           <label>Number of fields to add</label>
+          &nbsp;
           <input
             type="number"
             onChange={(e) =>
@@ -21,14 +23,10 @@ function HomePage() {
         {[...Array(inputfieldsToAdd)].map((value, index) => (
           <div id={index}>
             <p>
-              <h1>
+              <p>
                 stuff&nbsp;
                 {index + 1}
-              </h1>
-              <strong>
-                stuff&nbsp;
-                {index + 1}
-              </strong>
+              </p>
             </p>
           </div>
         ))}
