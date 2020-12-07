@@ -3,7 +3,10 @@
     "titleBar.activeForeground": "#000",
     "titleBar.inactiveForeground": "#000000CC",
     "titleBar.activeBackground": "#FFC600",
-    "titleBar.inactiveBackground": "#FFC600CC"
+    "titleBar.inactiveBackground": "#FFC600CC",
+    "editorError.foreground": "#00ff00",
+    "editorWarning.foreground": "#ff0",
+    "editorInfo.foreground": "#FF00FF"
   },
   // These are all my auto-save configs
   "editor.formatOnSave": true,
@@ -23,4 +26,9 @@
     "javascript",
     "javascriptreact"
   ],
+  // Get emmet to work in JSX
+  "emmet.triggerExpansionOnTab": true,
+  "files.associations": {
+    "*.js": "javascriptreact"
+  }
 }
