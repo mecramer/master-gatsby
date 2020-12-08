@@ -4,6 +4,7 @@ import PizzaList from '../components/PizzaList'
 import ToppingsFilter from '../components/ToppingsFilter'
 
 function PizzasPage({ data }) {
+  // console.clear()
   // console.log(data.pizzas)
   const pizzas = data.pizzas.nodes
 
