@@ -3,14 +3,14 @@ import { graphql } from 'gatsby'
 import PizzaList from '../components/PizzaList'
 import ToppingsFilter from '../components/ToppingsFilter'
 
-function PizzasPage({ data }) {
+function PizzasPage({ data, pageContext }) {
   // console.clear()
   // console.log(data.pizzas)
   const pizzas = data.pizzas.nodes
 
   return (
     <>
-      <ToppingsFilter />
+      <ToppingsFilter activeTopping={pageContext.topping} />
       <PizzaList pizzas={pizzas} />
     </>
   )
@@ -19,8 +19,10 @@ function PizzasPage({ data }) {
 export default PizzasPage
 
 export const query = graphql`
-  query PizzaQeury {
-    pizzas: allSanityPizza {
+  query PizzaQeury($toppingRegex: String) {
+    pizzas: allSanityPizza(
+      filter: { toppings: { elemMatch: { name: { regex: $toppingRegex } } } }
+    ) {
       nodes {
         name
         id
