@@ -30,5 +30,6 @@
   "emmet.triggerExpansionOnTab": true,
   "files.associations": {
     "*.js": "javascriptreact"
-  }
+  },
+  "npm-scripts.showStartNotification": false
 }
