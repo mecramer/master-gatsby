@@ -75,3 +75,6 @@ yarn-error.log
 .yarn-integrity
 
 finished-files-before-record/
+master-gatsby/package-lock.json
+master-gatsby-sanity-backend/.vscode/settings.json
+master-gatsby/.vscode/settings.json
