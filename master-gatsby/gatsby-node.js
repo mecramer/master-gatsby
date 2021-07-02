@@ -73,7 +73,7 @@ async function fetchBeersAndTurnIntoNodes({
   const beers = await response.json()
   console.log(beers)
   // 2. Loop over each one
-  for (const beer of beers) {
+  beers.forEach((beer) => {
     // create a node for each beer
     const nodeMeta = {
       id: createNodeId(`beer-${beer.name}`),
@@ -90,7 +90,7 @@ async function fetchBeersAndTurnIntoNodes({
       ...beer,
       ...nodeMeta,
     })
-  }
+  })
 }
 
 // sourceNodes is a gatsby extension point that tells plugins to source nodes
